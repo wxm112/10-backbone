@@ -87,8 +87,10 @@ var PostView = Backbone.View.extend({
   }
 });
 
+// This is global so we access it inside certain views.
 var appRouter = new AppRouter();
 
 $(document).ready(function () {
+  // This kicks off the router and makes the Back and Foward buttons work.
   Backbone.history.start();
 });
