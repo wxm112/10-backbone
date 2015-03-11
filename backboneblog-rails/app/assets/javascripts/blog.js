@@ -7,6 +7,10 @@ app.blogPosts = new app.Posts(); //@posts
 
 
 $(document).ready(function () {
+
+  if ($('#main').length === 0) {
+    return;
+  }
   
   // Replace <%= erb style %> with {{ Handlebars style }}
   // to prevent a confilict with Rails views.
@@ -19,8 +23,8 @@ $(document).ready(function () {
   app.appRouter = new app.AppRouter();
 
   // This kicks off the router and makes the Back and Foward buttons work.
-  Backbone.history.start();
+  Backbone.history.start({pushState: false }); //Modernizr.history
   });
-
+ 
   
 });
