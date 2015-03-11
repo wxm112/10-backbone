@@ -1,4 +1,5 @@
 var Animal = Backbone.Model.extend({
+  urlRoot: '/animals',
   defaults: {
     type: 'animal',
     ecosystem: '',
@@ -16,6 +17,7 @@ var Animal = Backbone.Model.extend({
 });
 
 var Zoo = Backbone.Collection.extend({
+  url: '/animals',
   model: Animal 
 });
 
