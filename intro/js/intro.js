@@ -1,5 +1,10 @@
 var Animal = Backbone.Model.extend({
   urlRoot: '/animals',
+  schema: {
+    type: 'Text',
+    ecosystem: 'Text',
+    stripes: 'Number'
+  },
   defaults: {
     type: 'animal',
     ecosystem: '',
