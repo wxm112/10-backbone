@@ -27,7 +27,7 @@ app.PostView = Backbone.View.extend({
       post_id: this.model.get('id')
     });
     var view = this
-    comment.save().done(function(newComment){
+    comment.save().done(function() { //(newComment)
       //view.comments.add(newComment);
       view.comments.fetch();
     });
